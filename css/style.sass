@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900)
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700)
+
+$body_bg: #F6F2F5
+$accent_color: #f66496
+
+.btn, .btn:hover, .btn:active, .btn:focus
+  background: $accent_color
+
+body
+  background: $body_bg
+  font-family: "Roboto", sans-serif
+  text-align: center
+
+.tabs li.tab a
+  color: $accent_color
+  &:hover
+    color: lighten($accent_color, 10%)
+
+p
+  font-weight: 300
+  font-size: 1.1em
+  line-height: 2.1em
+  color:  darken($body_bg, 55%)
+
+h1,h2,h3,h4,h5,h6
+  font-weight: 300
+
+h2
+  font-size: 20px
+  color: darken($body_bg, 35%)
+  line-height: 25px
+  text-transform: uppercase
+  text-align: center
+  display: block
+
+h3, h4
+  font-family: "Roboto Condensed", "Roboto", sans-serif
+  font-size: 28px
+  font-weight: 700
+  color: darken($body_bg, 20%)
+  text-transform: uppercase
+  text-align: center
+  margin-top: 25px
+  position: relative
+
+h4
+  font-size: 22px
+  margin: 15px 0 25px 0
+
+h5
+  text-align: left
+  font-size: 16px
+  color: darken($body_bg, 30%)
+  font-weight: 400
+
+hr
+  display: block
+  border: none
+  width: 65%
+  height: 5px
+  background: darken($body_bg, 10%)
+  margin: 25px auto
+  border-radius: 5px
+
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+
+.clearfix:after
+  clear: both
+
+.text-left
+  text-align: left !important
+
+.logo
+  margin-bottom: 30px
+
+.intro
+  margin-top: 65px
+
+.tabs .indicator
+  background-color: $accent_color
+
+.download, .download:active, .download:focus
+  position: fixed
+  top: 25px
+  right: 55px
+  background: #fff
+  border-radius: 3px
+  color: #323232
+  &:hover
+    color: white
+    background: $accent_color
+    cursor: pointer
+
+.btn-full
+  width: 100%
+  padding: 10px 0
+  height: auto
+  font-size: 18px
+  font-weight: 300
+  margin-top: 5px
+
+.img-responsive
+  max-width: 100%
+
+.footer
+  a
+    display: inline-block
+    margin: 0 10px
+    svg
+      transition: fill 500ms ease
+      fill: darken($body_bg, 25%)
+    &:hover
+      svg
+        fill: darken($body_bg, 55%)
+
+pre,code
+  white-space: normal !important
+
+pre.sPre
+  background-color: #1d1f21
+  color: #f8f8f2
+  padding: 10px
+  border-radius: 3px
+  text-align: left
+  font-size: 14px
+  max-width: 700px
+  white-space: normal
+
+table
+  text-align: left
+  border-collapse: collapse
+  td
+    padding: 10px 25px
+    vertical-align: top
+    color: darken($body_bg, 47%)
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+    @media(max-width: 992px)
+      padding: 10px 25px !important
+thead
+  background: darken($body_bg, 10%)
+  border: none
+  @media(max-width: 992px)
+    background: $body_bg
+  tr
+    th
+      position: relative
+      text-align: center
+      padding: 8px
+      font-weight: normal
+      color: darken($body_bg, 45%)
+      @media(max-width: 992px)
+        text-align: left
+      .b-left,
+      .b-right
+        position: absolute
+        background-color: darken($body_bg, 10%)
+        border-radius: 50%
+        top: 0
+        left: -19px
+        width: 38px
+        height: 38px
+      .b-right
+        left: auto
+        right: -19px

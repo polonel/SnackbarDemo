@@ -1,0 +1,22 @@
+{
+  "name": "SnackbarDemo",
+  "homepage": "https://github.com/polonel/SnackbarDemo",
+  "authors": [
+    "Chris Brame <polonel@gmail.com>"
+  ],
+  "description": "Demo site for snackbar.js",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.8.3",
+    "snackbar": "^0.1.9"
+  }
+}
