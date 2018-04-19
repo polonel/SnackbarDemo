@@ -44,6 +44,15 @@
       });
     });
 
+    $('.snackbar-onclose').click(function() {
+      Snackbar.show({
+        text: 'I will fire an alert box once I close.',
+        onClose: function(element) {
+          alert('Snackbar has been closed!');
+        }
+      });
+    });
+
     $('.button-collapse').sideNav();
     $('.scrollspy').scrollSpy();
   }); // end of document ready

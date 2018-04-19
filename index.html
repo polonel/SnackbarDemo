@@ -56,6 +56,7 @@
           <button class="waves-effect waves-light btn snackbar" data-pos="bottom-left" data-actionText="Thanks!">Action Text</button>
           <button class="waves-effect waves-light btn snackbar" data-pos="bottom-left" data-actionColor="#43a047">Text Color</button>
           <button class="waves-effect waves-light btn snackbar-callback" data-pos="bottom-left">Click Callback</button>
+          <button class="waves-effect waves-light btn snackbar-onclose" data-pos="bottom-left">onClose</button>          
           <br>
           <br>
           <div class="text-left col s10 offset-s1 hide-on-small-only" style="margin-bottom: 35px;">
@@ -64,6 +65,7 @@
               <li class="tab col s3"><a href="#code_action_text">Action Text</a></li>
               <li class="tab col s3"><a href="#code_text_color">Text Color</a></li>
               <li class="tab col s3"><a href="#code_click_callback">Click Callback</a></li>
+              <li class="tab col s3"><a href="#code_onClose">On Close</a></li>              
             </ul>
             <div id="code_no_action">
               <pre><code class="language-javascript">
@@ -95,6 +97,17 @@
                   &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;//Set opacity of element to 0 to close Snackbar <br>
                   &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;$(element).css('opacity', 0); <br>
                   &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;alert('Clicked Called!'); <br>
+                  &emsp;&emsp;&emsp;} <br>
+                  }); <br>
+                </code></pre>
+            </div>
+            <div id="code_onClose">
+              <pre>
+                  <code style="white-space: pre-line !important;" class="language-javascript">Snackbar.show({ <br>
+                  &emsp;&emsp;&emsp;text: 'I have a custom callback when action button is clicked.', <br>
+                  &emsp;&emsp;&emsp;width: '475px', <br>
+                  &emsp;&emsp;&emsp;onClose: function(element) { <br>
+                  &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;alert('Snackbar Closed!'); <br>
                   &emsp;&emsp;&emsp;} <br>
                   }); <br>
                 </code></pre>
@@ -224,8 +237,13 @@
                   </tr>
                   <tr>
                     <td>onActionClick</td>
-                    <td><i>dismiss function</i></td>
-                    <td>Default action closes the notification. A function with the notification element as the argument.</td>
+                    <td><i>function(element)</i></td>
+                    <td>Default action closes the notification.</td>
+                  </tr>
+                  <tr>
+                    <td>onClose</td>
+                    <td><i>function(element)</i></td>
+                    <td>Event fired when the notification has closed.</td>
                   </tr>
                 </tbody>
               </table>
